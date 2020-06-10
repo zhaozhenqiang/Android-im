@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <com.tencent.qcloud.tim.demo.profile.ProfileLayout
+    <com.tencent.qcloud.tim.uikit.profile.ProfileLayout
         android:id="@+id/profile_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

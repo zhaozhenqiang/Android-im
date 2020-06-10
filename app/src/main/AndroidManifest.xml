@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.tencent.qcloud.tim.demo">
+    package="com.tencent.qcloud.tim.uikit">
 
     <uses-sdk tools:overrideLibrary="tv.danmaku.ijk.media.player_arm64, tv.danmaku.ijk.media.player_x86_64"/>
 
@@ -62,14 +62,14 @@
     <uses-permission android:name="com.tencent.qcloud.tim.tuikit.permission.C2D_MESSAGE" />
 
     <application
-        android:name="com.tencent.qcloud.tim.demo.DemoApplication"
+        android:name="com.tencent.qcloud.tim.uikit.DemoApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.tencent.qcloud.tim.demo.SplashActivity"
+            android:name="com.tencent.qcloud.tim.uikit.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -81,10 +81,10 @@
         </activity>
 
         <activity
-            android:name="com.tencent.qcloud.tim.demo.login.LoginForDevActivity"
+            android:name="com.tencent.qcloud.tim.uikit.login.LoginForDevActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.tencent.qcloud.tim.demo.chat.ChatActivity"
+            android:name="com.tencent.qcloud.tim.uikit.chat.ChatActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden">
@@ -115,36 +115,36 @@
 
         </activity>
         <activity
-            android:name="com.tencent.qcloud.tim.demo.main.MainActivity"
+            android:name="com.tencent.qcloud.tim.uikit.main.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.tencent.qcloud.tim.demo.menu.AddMoreActivity"
+            android:name="com.tencent.qcloud.tim.uikit.menu.AddMoreActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.tencent.qcloud.tim.demo.contact.FriendProfileActivity"
+            android:name="com.tencent.qcloud.tim.uikit.contact.FriendProfileActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.tencent.qcloud.tim.demo.contact.NewFriendActivity"
+            android:name="com.tencent.qcloud.tim.uikit.contact.NewFriendActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.tencent.qcloud.tim.demo.contact.BlackListActivity"
+            android:name="com.tencent.qcloud.tim.uikit.contact.BlackListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.tencent.qcloud.tim.demo.contact.GroupListActivity"
+            android:name="com.tencent.qcloud.tim.uikit.contact.GroupListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.tencent.qcloud.tim.demo.menu.StartC2CChatActivity"
+            android:name="com.tencent.qcloud.tim.uikit.menu.StartC2CChatActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.tencent.qcloud.tim.demo.profile.WebViewActivity"
+            android:name="com.tencent.qcloud.tim.uikit.profile.WebViewActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.tencent.qcloud.tim.demo.menu.StartGroupChatActivity"
+            android:name="com.tencent.qcloud.tim.uikit.menu.StartGroupChatActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity
-            android:name="com.tencent.qcloud.tim.demo.helper.TRTCActivity"
+            android:name="com.tencent.qcloud.tim.uikit.helper.TRTCActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
 
@@ -190,7 +190,7 @@
 
         <!-- 自实现小米推送的接收广播 -->
         <receiver
-            android:name="com.tencent.qcloud.tim.demo.thirdpush.XiaomiMsgReceiver"
+            android:name="com.tencent.qcloud.tim.uikit.thirdpush.XiaomiMsgReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
@@ -246,7 +246,7 @@
         </activity>
 
         <receiver
-            android:name="com.tencent.qcloud.tim.demo.thirdpush.HUAWEIPushReceiver"
+            android:name="com.tencent.qcloud.tim.uikit.thirdpush.HUAWEIPushReceiver"
             android:permission="com.tencent.qcloud.tim.tuikit.permission.PROCESS_PUSH_MSG">
             <intent-filter>
 
@@ -273,7 +273,7 @@
         <!-- ********华为推送设置end******** -->
 
         <!-- ********魅族推送设置start******** -->
-        <receiver android:name="com.tencent.qcloud.tim.demo.thirdpush.MEIZUPushReceiver">
+        <receiver android:name="com.tencent.qcloud.tim.uikit.thirdpush.MEIZUPushReceiver">
             <intent-filter>
 
                 <!-- 接收push消息 -->
@@ -303,7 +303,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <!-- push应用定义消息receiver声明 -->
-        <receiver android:name="com.tencent.qcloud.tim.demo.thirdpush.VIVOPushMessageReceiverImpl">
+        <receiver android:name="com.tencent.qcloud.tim.uikit.thirdpush.VIVOPushMessageReceiverImpl">
             <intent-filter>
 
                 <!-- 接收push消息 -->
@@ -321,7 +321,7 @@
 
         <!-- ********海外google云消息传递start******** -->
         <service
-            android:name=".thirdpush.GoogleFCMMsgService"
+            android:name="com.tencent.qcloud.tim.uikit.thirdpush.GoogleFCMMsgService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

@@ -1,6 +1,6 @@
 package com.huawei.android.hms.agent.common;
 
-import com.tencent.qcloud.tim.demo.utils.DemoLog;
+import com.tencent.qcloud.tim.uikit.utils.DemoLog;
 
 /**
  * 日志打印类，对打印日志进行封装，方便根据日志定位问题
